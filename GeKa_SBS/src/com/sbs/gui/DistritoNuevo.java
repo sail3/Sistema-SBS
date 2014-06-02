@@ -7,7 +7,7 @@
 package com.sbs.gui;
 
 import com.sbs.core.Access;
-import com.sbs.to.DistritoTO;
+import com.sbs.core.to.DistritoTO;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -147,13 +147,9 @@ public class DistritoNuevo extends javax.swing.JFrame {
             }
             Access.insertarDistrito(new DistritoTO(codigo, nombre));
         } catch (ClassNotFoundException ex) {
-            //Logger.getLogger(DistritoNuevo.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this, "Error Driver no encontrado.", "ERROR", 3);
-            
+            Logger.getLogger(DistritoNuevo.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            //Logger.getLogger(DistritoNuevo.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this, "Error en la la conexion SQL. contactese a su administrador de sistemas.", "ERROR", 3);
-            
+            Logger.getLogger(DistritoNuevo.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

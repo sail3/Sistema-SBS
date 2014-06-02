@@ -7,7 +7,7 @@
 package com.sbs.gui;
 
 import com.sbs.core.Access;
-import com.sbs.to.DistritoTO;
+import com.sbs.core.to.DistritoTO;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -230,26 +230,24 @@ public class DistritoEditar extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (jButton1.getText().equals("Guardar")) {
-            jButton1.setText("Modificar");
             try {
+                jButton1.setText("Modificar");
                 String nombre = jTxtNombreDistrito.getText();
                 String codigo = jTxtCodigoDistrito.getText();
-                Access.modificarDistrito(distrito);
+                Access.modificarDistrito(new DistritoTO(codigo, nombre));
                 cargarDistritos();
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(DistritoEditar.class.getName()).log(Level.SEVERE, null, ex);
-                JOptionPane.showMessageDialog(this, "Error al cargar la clase.", "ERROR", 3);
             } catch (SQLException ex) {
                 Logger.getLogger(DistritoEditar.class.getName()).log(Level.SEVERE, null, ex);
-                JOptionPane.showMessageDialog(this, "Error en la conexion a la base de datos, contactese al administrador de base de datos.", "ERROR", 3);
             }
         }
         else if (jButton1.getText().equals("Modificar")) {
             jButton1.setText("Guardar");
         }
         else if (jButton1.getText().equals("Guardar Nuevo")) {
-            jButton1.setText("Modificar");
             try {
+                jButton1.setText("Modificar");
                 String nombre = jTxtNombreDistrito.getText();
                 String codigo = jTxtCodigoDistrito.getText();
                 if (codigo.length() > 10) {
@@ -259,13 +257,9 @@ public class DistritoEditar extends javax.swing.JFrame {
                 Access.insertarDistrito(new DistritoTO(codigo, nombre));
                 cargarDistritos();
             } catch (ClassNotFoundException ex) {
-                //Logger.getLogger(DistritoNuevo.class.getName()).log(Level.SEVERE, null, ex);
-                JOptionPane.showMessageDialog(this, "Error Driver no encontrado.", "ERROR", 3);
-
+                Logger.getLogger(DistritoEditar.class.getName()).log(Level.SEVERE, null, ex);
             } catch (SQLException ex) {
-                //Logger.getLogger(DistritoNuevo.class.getName()).log(Level.SEVERE, null, ex);
-                JOptionPane.showMessageDialog(this, "Error en la la conexion SQL. contactese a su administrador de sistemas.", "ERROR", 3);
-
+                Logger.getLogger(DistritoEditar.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -286,10 +280,8 @@ public class DistritoEditar extends javax.swing.JFrame {
             cargarDistritos();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(DistritoEditar.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this, "Error Driver no encontrado.", "ERROR", 3);
         } catch (SQLException ex) {
             Logger.getLogger(DistritoEditar.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this, "Error en la la conexion SQL. contactese a su administrador de sistemas.", "ERROR", 3);
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 

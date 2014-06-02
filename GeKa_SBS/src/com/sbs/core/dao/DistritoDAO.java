@@ -7,7 +7,7 @@
 package com.sbs.core.dao;
 
 import com.sbs.db.AccesoDB;
-import com.sbs.to.DistritoTO;
+import com.sbs.core.to.DistritoTO;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

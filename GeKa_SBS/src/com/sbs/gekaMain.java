@@ -7,7 +7,7 @@
 package com.sbs;
 
 import com.sbs.core.dao.DistritoDAO;
-import com.sbs.to.DistritoTO;
+import com.sbs.core.to.DistritoTO;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

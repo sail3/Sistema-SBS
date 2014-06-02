@@ -7,7 +7,7 @@
 package com.sbs.core;
 
 import com.sbs.core.dao.DistritoDAO;
-import com.sbs.to.DistritoTO;
+import com.sbs.core.to.DistritoTO;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
