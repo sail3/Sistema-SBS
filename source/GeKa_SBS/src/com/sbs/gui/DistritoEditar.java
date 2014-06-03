@@ -252,6 +252,7 @@ public class DistritoEditar extends javax.swing.JFrame {
                 String codigo = jTxtCodigoDistrito.getText();
                 if (codigo.length() > 10) {
                     JOptionPane.showMessageDialog(this, "Inserte un codigo valido, igual a 10 caracteres.", "ERROR",2);
+                    setDistrito();
                     return;
                 }
                 Access.insertarDistrito(new DistritoTO(codigo, nombre));

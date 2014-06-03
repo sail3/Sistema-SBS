@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.sbs.db;
+package com.sbs.core.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
