@@ -15,9 +15,9 @@ import java.sql.SQLException;
  * @author sail3
  */
 public class AccesoDB {
-    private static String url = "jdbc:mysql://192.168.1.3/geka_r";
+    private static String url = "jdbc:mysql://localhost/geka_r";
     private static String user = "root";
-    private static String pass = "12345";
+    private static String pass = "";
     private static Connection cnx = null;
     
     public static Connection getConeccion() throws ClassNotFoundException, SQLException {

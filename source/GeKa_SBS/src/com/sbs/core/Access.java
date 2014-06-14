@@ -7,6 +7,9 @@
 package com.sbs.core;
 
 import com.sbs.core.dao.DistritoDAO;
+import com.sbs.core.dao.EnfermeraDAO;
+import com.sbs.core.dao.PacienteDAO;
+import com.sbs.core.dao.PadreDAO;
 import com.sbs.core.to.DistritoTO;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -16,16 +19,29 @@ import java.util.ArrayList;
  * @author sail3
  */
 public class Access {
-    public static void insertarDistrito(DistritoTO distrito) throws ClassNotFoundException, SQLException {
-        new DistritoDAO().insertarDistrito(distrito);
+    
+    private static Access acc;
+    static {
+        acc = new Access();
     }
-    public static ArrayList<DistritoTO> listarDistritos() throws ClassNotFoundException, SQLException{
-        return new DistritoDAO().listarDistritos();
+
+    public static Access getInstance() {
+        return acc;
     }
-    public static void modificarDistrito(DistritoTO distrito) throws ClassNotFoundException, SQLException {
-        new DistritoDAO().modificarDistrito(distrito);
+    
+    public DistritoDAO getDistritoDAO() {
+        return new DistritoDAO();
     }
-    public static void eliminarDistrito(DistritoTO distrito) throws ClassNotFoundException, SQLException {
-        new DistritoDAO().eliminarDistrito(distrito);
+    
+    public EnfermeraDAO getEnfermeraDAO() {
+        return new EnfermeraDAO();
+    }
+    
+    public PacienteDAO getPacienteDAO() {
+        return new PacienteDAO();
+    }
+    
+    public PadreDAO getPadreDAO() {
+        return new PadreDAO();
     }
 }

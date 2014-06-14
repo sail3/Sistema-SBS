@@ -12,19 +12,32 @@ package com.sbs.core.to;
  */
 public class PadreTO {
     private String dni;
-    private String nomrbe;
+    private String nombre;
     private String materno;
     private String paterno;
 
     public PadreTO() {
     }
 
-    public PadreTO(String dni, String nomrbe, String materno, String paterno) {
+    public PadreTO(String dni) {
         this.dni = dni;
-        this.nomrbe = nomrbe;
+    }
+
+    public PadreTO(String dni, String nombre, String materno, String paterno) {
+        this.dni = dni;
+        this.nombre = nombre;
         this.materno = materno;
         this.paterno = paterno;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
 
     public String getDni() {
         return dni;
@@ -32,14 +45,6 @@ public class PadreTO {
 
     public void setDni(String dni) {
         this.dni = dni;
-    }
-
-    public String getNomrbe() {
-        return nomrbe;
-    }
-
-    public void setNomrbe(String nomrbe) {
-        this.nomrbe = nomrbe;
     }
 
     public String getMaterno() {

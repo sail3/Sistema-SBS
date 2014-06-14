@@ -81,16 +81,16 @@ create table Enfermera (
 	vch_enfenombre varchar(40) not null,
 	vch_enfedireccion varchar(40) not null,
 	chr_enfeTelefono char(12) not null,
-	primary key (chr_enfecodigo),
+	primary key (chr_enfecodigo)
 );
 
 create table Paciente_Enfermera (
-	chr_pacicodigo not null,
-	chr_vacucodigo not null,
-	chr_enfecodigo not null,
-	chr_pomecodigo not null,
-	dat_pavafecha not null,
-	vch_pavadosis not null,
+	chr_pacicodigo char() not null,
+	chr_vacucodigo char() not null,
+	chr_enfecodigo char() not null,
+	chr_pomecodigo char() not null,
+	dat_pavafecha DATETIME not null,
+	vch_pavadosis varchar(20) not null,
 	foreign key fk_PacienteVacuna_Paciente (chr_pacicodigo)
 	references Paciente (chr_pacicodigo)
 	on delete restrict
