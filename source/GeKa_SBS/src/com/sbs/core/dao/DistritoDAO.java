@@ -18,9 +18,9 @@ import java.util.ArrayList;
  * @author sail3
  */
 public class DistritoDAO {
-   
+    
     public boolean insertarDistrito(DistritoTO distrito) throws ClassNotFoundException, SQLException {
-        String sql = "insert into Distrito (chr_distcodigo, vchr_distnombre) values (?, ?)";
+        String sql = "insert into Distrito (chr_distcodigo, vch_distnombre) values (?, ?)";
         PreparedStatement ps = AccesoDB.getConeccion().prepareStatement(sql);
         ps.setString(1, distrito.getCodigo());
         ps.setString(2, distrito.getNombre());

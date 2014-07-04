@@ -85,10 +85,10 @@ create table Enfermera (
 );
 
 create table Paciente_Enfermera (
-	chr_pacicodigo char(10) not null,
-	chr_vacucodigo char(8) not null,
-	chr_enfecodigo char(15) not null,
-	chr_pomecodigo char(10) not null,
+	chr_pacicodigo char() not null,
+	chr_vacucodigo char() not null,
+	chr_enfecodigo char() not null,
+	chr_pomecodigo char() not null,
 	dat_pavafecha DATETIME not null,
 	vch_pavadosis varchar(20) not null,
 	foreign key fk_PacienteVacuna_Paciente (chr_pacicodigo)

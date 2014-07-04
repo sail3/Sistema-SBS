@@ -9,6 +9,7 @@ package com.sbs;
 import com.sbs.core.dao.DistritoDAO;
 import com.sbs.core.to.DistritoTO;
 import com.sbs.core.validator.PadreVD;
+import com.sbs.gui.InsertarPaciente;
 import java.awt.FlowLayout;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -43,6 +44,7 @@ public class gekaMain {
         } catch (SQLException ex) {
             Logger.getLogger(gekaMain.class.getName()).log(Level.SEVERE, null, ex);
         }*/
+        new JFrame().add(new InsertarPaciente()).show();
         String cadena = "ssssssss";
         String dni = "12349836";
         System.out.println(PadreVD.validarNombre(cadena));

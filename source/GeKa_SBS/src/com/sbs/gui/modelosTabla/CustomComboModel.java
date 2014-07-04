@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.sbs.gui;
+package com.sbs.gui.modelosTabla;
 
 import com.sbs.core.to.DistritoTO;
 import java.util.ArrayList;

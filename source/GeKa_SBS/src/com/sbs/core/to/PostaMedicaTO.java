@@ -10,15 +10,15 @@ package com.sbs.core.to;
  *
  * @author sail3
  */
-public class PostaMedica {
+public class PostaMedicaTO {
     private String codigo;
     private String nombre;
     private DistritoTO distrito;
 
-    public PostaMedica() {
+    public PostaMedicaTO() {
     }
 
-    public PostaMedica(String codigo, String nombre, DistritoTO distrito) {
+    public PostaMedicaTO(String codigo, String nombre, DistritoTO distrito) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.distrito = distrito;

@@ -141,9 +141,19 @@ public class MainWindow extends javax.swing.JFrame {
         jMenu4.setText("Mantenimiento");
 
         jMenuItem3.setText("Distrito");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem3);
 
         jMenuItem4.setText("Posta Medica");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem4);
 
         jMenuItem5.setText("jMenuItem5");
@@ -178,6 +188,15 @@ public class MainWindow extends javax.swing.JFrame {
         JPanel panel = new InsertarPaciente();
         blockPanel.addTab("Nuevo Paciente", new InsertarPaciente());
     }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        System.out.println("Ejecutado mantenimiento distrito");
+        blockPanel.addTab("Mantenimiento Distrito", new MantenimientoDistrito());
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        blockPanel.addTab("Mantenimiento Posta Medica", new MantenimientoPostaMedica());
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments

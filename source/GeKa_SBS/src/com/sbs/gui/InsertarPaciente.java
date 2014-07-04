@@ -15,7 +15,11 @@ import com.sbs.core.to.PadreTO;
 import com.sbs.core.validator.PacienteVD;
 import com.sbs.core.validator.PadreVD;
 import java.sql.Date;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -180,6 +184,12 @@ public class InsertarPaciente extends javax.swing.JPanel {
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setText("DNI");
 
+        jTxtApoDni.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTxtApoDniKeyReleased(evt);
+            }
+        });
+
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel10.setText("Nombres");
 
@@ -229,12 +239,13 @@ public class InsertarPaciente extends javax.swing.JPanel {
                     .addComponent(jLabel10)
                     .addComponent(jTxtApoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(jTxtApoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel12)
-                        .addComponent(jTxtApoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTxtApoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel11)
+                        .addComponent(jTxtApoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -273,7 +284,7 @@ public class InsertarPaciente extends javax.swing.JPanel {
                 .addGap(38, 38, 38))
             .addGroup(layout.createSequentialGroup()
                 .addGap(189, 189, 189)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -387,6 +398,20 @@ public class InsertarPaciente extends javax.swing.JPanel {
             
         
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTxtApoDniKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTxtApoDniKeyReleased
+        String dniApoderado = jTxtApoDni.getText();
+        if (dniApoderado.length() == 8) {
+            try {
+                PadreTO padre = Access.getInstance().getPadreDAO().buscarPadre(new PadreTO(dniApoderado));
+                jTxtApoNombre.setText(padre.getNombre());
+                jTxtApoPaterno.setText(padre.getPaterno());
+                jTxtApoMaterno.setText(padre.getMaterno());
+            } catch (Exception ex) {
+                
+            }
+        }
+    }//GEN-LAST:event_jTxtApoDniKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

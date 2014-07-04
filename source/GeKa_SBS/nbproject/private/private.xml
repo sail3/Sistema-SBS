@@ -2,16 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Sail3/Proyectos/Sistema-SBS/source/GeKa_SBS/src/com/sbs/core/validator/PadreVD.java</file>
-            <file>file:/C:/Users/Sail3/Proyectos/Sistema-SBS/source/GeKa_SBS/src/com/sbs/core/to/PadreTO.java</file>
-            <file>file:/C:/Users/Sail3/Proyectos/Sistema-SBS/source/GeKa_SBS/src/com/sbs/core/dao/PacienteDAO.java</file>
-            <file>file:/C:/Users/Sail3/Proyectos/Sistema-SBS/source/GeKa_SBS/src/com/sbs/core/validator/PacienteVD.java</file>
-            <file>file:/C:/Users/Sail3/Proyectos/Sistema-SBS/source/GeKa_SBS/src/com/sbs/gui/InsertarPaciente.java</file>
-            <file>file:/C:/Users/Sail3/Proyectos/Sistema-SBS/source/GeKa_SBS/src/com/sbs/gui/MainWindow.java</file>
-            <file>file:/C:/Users/Sail3/Proyectos/Sistema-SBS/source/GeKa_SBS/src/com/sbs/core/dao/PadreDAO.java</file>
-            <file>file:/C:/Users/Sail3/Proyectos/Sistema-SBS/source/GeKa_SBS/src/com/sbs/core/to/PacienteTO.java</file>
-            <file>file:/C:/Users/Sail3/Proyectos/Sistema-SBS/source/GeKa_SBS/src/com/sbs/core/Access.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
