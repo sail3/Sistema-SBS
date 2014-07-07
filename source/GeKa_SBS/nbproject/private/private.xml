@@ -2,6 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/home/sail3/Proyectos/SistemaSBS/source/GeKa_SBS/src/com/sbs/gui/MantenimientoPostaMedica.java</file>
+            <file>file:/home/sail3/Proyectos/SistemaSBS/source/GeKa_SBS/src/com/sbs/gui/InsertarPaciente.java</file>
+            <file>file:/home/sail3/Proyectos/SistemaSBS/source/GeKa_SBS/src/com/sbs/gui/MantenimientoDistrito.java</file>
+            <file>file:/home/sail3/Proyectos/SistemaSBS/source/GeKa_SBS/src/com/sbs/gui/MainWindow.java</file>
+        </group>
     </open-files>
 </project-private>
